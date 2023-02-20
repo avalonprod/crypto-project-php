@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% if page.lang == 'es' %}
+<html lang="es">
+{% elsif page.lang == 'he' %}
+<html lang="he">
+{% elsif page.lang == 'pt' %}
+<html lang="pt">
+{% elsif page.lang == 'it' %}
+<html lang="it">
+{% elsif page.lang == 'ar' %}
+<html lang="ar">
+{% elsif page.lang == 'sv' %}
+<html lang="sv">
+{% elsif page.lang == 'de' %}
+<html lang="de">
+{% elsif page.lang == 'fr' %}
+<html lang="fr">
+{% elsif page.lang == 'uk' %}
+<html lang="uk">
+{% elsif page.lang == 'ru' %}
+<html lang="ru">
+{% elsif page.lang == 'nl' %}
+<html lang="nl">
+{% elsif page.lang == 'el' %}
+<html lang="el">
+{% elsif page.lang == 'th' %}
+<html lang="th">
+{% elsif page.lang == 'zh' or page.lang == 'zh_CN' %}
+<html lang="zh">
+{% elsif page.lang == 'bg' %}
+<html lang="bg">
+{% elsif page.lang == 'ja' %}
+<html lang="ja">
+{% elsif page.lang == 'pl' %}
+<html lang="pl">
+{% elsif page.lang == 'en' %}
+<html lang="en">
+{% elsif page.lang == 'ko' %}
+<html lang="ko">
+{% elsif page.lang == 'da' %}
+<html lang="da">
+{% elsif page.lang == 'nb' %}
+<html lang="nb">
+{% elsif page.lang == 'tr' %}
+<html lang="tr">	
+{% elsif page.lang == 'ro' %}
+<html lang="ro">		
+{% elsif page.lang == 'vi' or page.lang == 'vn' %}
+<html lang="vn">
+{% else %}
+<html lang="en">
+{% endif %}
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.seo_title }}</title>
+    <link rel="alternate" hreflang="x-default" href="/halving/" />
+    {% for post in site.pages %}
+	{% if post.pagename == page.pagename %}	
+    <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+    {% endif %}  			
+	{% endfor %}
+	
+	{% if page.desc %}
+    <meta name="description" content="{{ page.desc }}" />
+    <meta property="og:description" content="{{ page.desc }}">
+    <meta property="twitter:description" content="{{ page.desc }}">
+    {% endif %}
+	<link rel="canonical" href="https://buybitcoinworldwide.com{{ page.url | replace:'index.html',''}}">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    {% if page.specialfont %}	
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+    {% endif %} 
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/pages/clock/style.css" />
+
+<!--
+    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+-->
+
+    {% if page.metaOGImage %}
+      <meta property="og:type" content="website">
+    <meta property="og:image" content="https://buybitcoinworldwide.com{{ page.metaOGImage }}">
+    <meta name="twitter:image" content="https://buybitcoinworldwide.com{{ page.metaOGImage }}">
+    <meta name="twitter:text:title" content="{{ page.title }}">
+    {% endif %}
+
+    <meta name="twitter:title" content="{{ page.seotitle }}">
+
+    <meta property="og:title" content="{{ page.seotitle }}">
+
+    <style>
+      .clock {
+          border-radius: 50%;
+          background: url(/img/clock/clock.svg) no-repeat center;
+          background-size: 97%;
+          height: 600px;
+          position: relative;
+          width: 600px;
+          margin: 0 auto;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+      }
+      </style>
+  </head>
+
+  <body {% if page.dotclock %}class="dotclock"{% endif %} {% if page.spaceclock %}class="spaceclock"{% endif %} {% if page.rtl %}id="arabic"{% endif %}>
+
+<div class="container">
+    <h1>	         
+      {% if page.lang == "es" %}
+      Reloj Bitcoin
+     {% elsif page.lang == 'ko' %}
+     비트코인 시계
+     {% elsif page.lang == 'cn' %}
+     比特币时钟
+     {% elsif page.lang == 'uk' %}
+     Біткоїн-годинник
+     {% elsif page.lang == 'de' %}
+     Bitcoin-Uhr
+     {% elsif page.lang == 'ru' %}
+     Биткоин-часы
+     {% elsif page.lang == 'it' %}
+     Bitcoin Clock
+     {% elsif page.lang == 'nl' %}
+     Bitcoin-klok
+     {% elsif page.lang == 'ro' %}
+     Ceasul Bitcoin
+     {% elsif page.lang == 'en' %}
+     Bitcoin Halving Clock
+     {% elsif page.lang == 'pt' %}
+     Bitcoin Clock
+     {% elsif page.lang == 'ja' %}
+     ビットコインクロック
+     {% elsif page.lang == 'ar' %}
+     ساعة البتكوين
+     {% elsif page.lang == 'cs' %}
+     Bitcoinové hodiny
+     {% elsif page.lang == 'he' %}
+     שעון הביטקוין 
+     {% elsif page.lang == 'vn' %}
+     Đồng hồ Bitcoin   
+     {% elsif page.lang == 'pl' %}
+     Zegar Bitcoinów
+     {% elsif page.lang == 'th' %}
+     นาฬิกา Bitcoin
+     {% elsif page.lang == 'id' %}
+     Jam Bitcoin
+     {% elsif page.lang == 'tr' %}
+     Bitcoin Saati
+     {% elsif page.lang == 'fr' %}
+     Bitcoin Clock
+     {% elsif page.lang == 'el' %}
+     Ρολόι Bitcoin
+     {% elsif page.lang == 'ms' %}
+      Jam Bitcoin
+     {% endif %}</h1>
+    
+    {{ content }}
+
+    <img class="path" src="/img/clock/path1.png" alt="yellow line for home page">
+    
+    <footer>
+
+        <p>Bitcoin Clock - a project by <span><a href="/">Buy Bitcoin Worldwide.</a></span></p>
+        <a href="/">
+        <img style="max-width: 98% !important;" src="/img/clock/logofooter.png" alt="buy bitcoin worldwide">
+      </a>
+    </footer>
+
+
+    {% include analytics.html %}  
+
+</body>
+</html>

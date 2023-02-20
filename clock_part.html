@@ -1,0 +1,472 @@
+ {%- assign lng = "en" -%}
+{%- if page.lang -%}
+  {%- assign lng = page.lang -%}
+{%- endif -%}
+{%- assign cd = site.data.clock[lng] -%}
+<div class="halving">
+      <p>{{page.clock.title_halving}}</p>
+      <div class="inner_halving">
+
+        <link rel="stylesheet" href="style.css">
+
+
+
+
+        <body>
+          <div id="root">
+              <header class="header">
+                  <div class="wrapper">
+                      <div class="logo">
+                          <img src="logo.png" alt="logo">
+                      </div>
+                      <div class="header-subtitle">
+                          Bitcoin Halving Clock
+                      </div>
+                      <div class="hamburger">
+                          <span></span>
+                          <span class="center-line"></span>
+                          <span></span>
+                      </div>
+                  </div>
+              </header>
+        
+              <main class="main">
+        
+                  <section class="halving-clock">
+                      <div class="wrapper">
+                          <h1 class="title">{{page.clock.title_halving}}</h1>
+                          <div class="time">
+                              <ul class="timer">
+                                  <li class="timer-item timer-days">
+                                      <span class="label">{{cd.d}}</span>
+                                      <span class="value" id="days_calc"></span>
+                                  </li>
+                                  <li class="timer-item timer-hours">
+                                      <span class="label">{{cd.h}}</span>
+                                      <span class="value" id="hours_calc"></span>
+                                  </li>
+                                  <li class="timer-item timer-minutes">
+                                      <span class="label">{{cd.m}}</span>
+                                      <span class="value" id="minutes_calc"></span>
+                                  </li>
+                                  <li class="timer-item timer-seconds">
+                                      <span class="label">{{cd.s}}</span>
+                                      <span class="value" id="seconds_calc"></span>
+                                  </li>
+                                  <li class="timer-item timer-miliseconds">
+                                      <span class="label">ms</span>
+                                      <span class="value" id="mseconds_calc"></span>
+                                  </li>  
+                              </ul>
+                              <div class="time-footer">
+                                  <div class="date">
+                                    {{include.title_date}} <span id="date_eta">March 28, 2024</span>
+                                  </div>
+                                  <div class="share">
+                                      <span>Share:</span>
+                                      <ul class="share-list">
+                                          <li class="share-item">
+                                              <a href="#"><img src="icons/Facebook.png" alt="facebook"></a>
+                                          </li>
+                                          <li class="share-item">
+                                              <a href="#"><img src="icons/Twitter.png" alt="twitter"></a>
+                                          </li>
+                                          <li class="share-item">
+                                              <a href="#"><img src="icons/Linkedin.png" alt="linkedin"></a>
+                                          </li>
+                                          <li class="share-item">                         
+                                              <a href="#"><img src="icons/Email.png" alt="email"></a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+        
+                          <div class="wrapper">
+                              <div class="clock">
+                                  <img src="Circle.png" alt="">
+                                  <div class="arrow"></div>
+                                  <div class="block-height">
+                                      <span class="subtitle">Block height</span>
+                                      <span class="value">774,476</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="clock-info">
+                              <ul class="list">
+                                  <li class="item">
+                                      <span class="subtitle">Total Bitcoins left to mine</span>
+                                      <span class="value">1,721,994</span>
+                                  </li>
+                                  <li class="item">
+                                      <span class="subtitle">BTC Price</span>
+                                      <span class="value">23,133.46</span>
+                                  </li>
+                                  <li class="item">
+                                      <span class="subtitle">Blovk until halving</span>
+                                      <span class="value" id="#calc-content-div">65,519</span>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+        
+                  </section>
+                  <hr>
+                  <section class="main-content">
+                      <div class="wrapper">
+                          <aside class="sidebar">
+                              <div class="close"></div>
+                              <div class="sidebar-nav">
+                                  <div class="sidebar-title">Table of content</div>
+                                  <ul class="list">
+                                      <li class="item">
+                                          <a href="#" class="link">What is the Bitcoin Halving</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">What is the Significance of the Bitcoin Block Halving?</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">Bitcoin Halving Chart</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">Bitcoin Halving Schedule</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">What Happens to Miners During Halvings?</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">When is the 2024 Bitcoin Halving?</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">Bitcoin Halving Dates History</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">2012 Halving</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">2016 Halving</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">2020 Halving</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">Current Bitcoin Block Subsidy</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">Bitcoin Halving Parties</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">When Will All 21 Million Bitcoins be Mined?</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">Is There an Ethereum Block Reward Halving Countdown?</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">What is the Bitcoin Clock?</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">Is the Halving Necessary?</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">Why Our Estimates Are the Most Accurate</a>
+                                      </li>
+                                      <li class="item">
+                                          <a href="#" class="link">What is the Current Bitcoin Block Reward?</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </aside>
+                          <div class="button-wrapper">
+                              <button class="aside-button">Table of content</button>
+                          </div>
+
+                      </div>
+                  </section>
+                  <div class="overflow"></div>
+              </main>
+          </div>
+        
+          <script>
+            const asideButton = document.querySelector('.aside-button')
+            const aside = document.querySelector('aside')
+            const body = document.querySelector('body')
+            const close = document.querySelector('.close')
+            
+    
+            asideButton.addEventListener('click', ()=>{
+                aside.classList.add('active')
+                body.classList.add('active')
+            })
+    
+            close.addEventListener('click', ()=>{
+                aside.classList.remove('active')
+                body.classList.remove('active')
+            })
+    
+    
+    
+    
+            let arrow = document.querySelector('.arrow')
+            let blockHeightValue = document.querySelector('.block-height .value')
+    
+            const minHeight = 630000
+            const maxHeight = 840000
+            function startClock(height) {
+                const value = (height - minHeight) * 0.00095
+                blockHeightValue.innerHTML = height
+                arrow.style.transform = `rotate(${value}deg)`;
+            }
+       
+            fetch("https://www.satochi.co/latest-block")
+                .then((res) => res.json())
+                .then(data => startClock(data))
+       
+              
+        </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{page.config}}"></script>
+
+<script>
+    function startClock(height){
+      var total_number = 12.5 * (height - {{include.p1}}) + {{include.p2}};
+      var append_html = "<span></span>";
+
+      var til_halving = {{include.p3}} - height;
+      console.log(til_halving, height)
+      append_html += "<b>{{include.counter}}</b> " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      console.log(GLOBAL_BLOCKTIME)
+      // var block_time = 9.69166666667;
+      var minutes_til_halving = til_halving * GLOBAL_BLOCKTIME;
+      var days_til_halving = minutes_til_halving / (24 * 60);
+      var days_remainder = days_til_halving - Math.floor(days_til_halving);
+      var minutes = days_remainder - Math.floor(days_remainder);
+      var percent_done = (((height % {{include.p4}}) / {{include.p4}}) * 360);
+      var percent_done1 = 0;
+      var seconds_til_halving = Math.max(Math.round((minutes_til_halving - Math.floor(minutes_til_halving)) * 60), 0);
+      var ms = 1000;
+      var t9 = 0;
+      var corner = 0;
+      var period = {{include.p5}} / 360 * 1000;
+      $(".minutes").css("transform", "rotate(" + percent_done + "deg)");
+      $(".secondsArr").css("transform", "rotate(" + corner + "deg)");
+
+      setInterval(() => {
+          $(".secondsArr").css("transform", "rotate(" + corner + "deg)");
+          corner++;
+          if (corner >= 360) {
+              corner = 0;
+          }
+      }, period);
+
+      setInterval(() => {
+          ms -= 21;
+          if (ms < 0) {
+              ms=999;
+          }
+          $('#mseconds_calc').html(ms.toString());
+      }, 10);
+
+      setInterval(() => {
+        seconds_til_halving--;
+        if (seconds_til_halving < 0) {
+          seconds_til_halving = 59;
+          minutes = minutes - (1/60);
+                      if (minutes < 0) {
+            minutes = 59 / 60;
+                          days_remainder = days_remainder - (1/24);
+                          if (days_remainder < 0) {
+              days_remainder = 23 / 24;              
+              days_til_halving--;
+            }
+          }
+        }
+        $('#days_calc').html(Math.floor(days_til_halving));
+        $('#hours_calc').html(Math.floor(days_remainder * 24));
+        $('#minutes_calc').html(((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        $('#seconds_calc').html(seconds_til_halving);
+      }, 1000);
+
+      var d = new Date(Date.now() + ((days_til_halving * 24 + days_remainder) * 60 + minutes) * 60 * 1000);
+
+      const monthes = {{ "[" | append: cd.monthes | append: "]"}};
+      /* const monthes = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octpber", "November", "December"]; */
+      var month = d.getMonth();
+      var month_name = monthes[month];
+      var day = d.getUTCDate();
+      var year = d.getUTCFullYear();
+
+      $('#date_eta').append(month_name + " " + day + ", " + year);
+
+      $("#calc-content-div").append(append_html);
+    }
+    jQuery(document).ready(function ($) {
+      $.get("https://www.satochi.co/latest-block")
+      .done((height) => {
+        startClock(height)
+      })
+      .fail(() => {
+        console.error("error calling latest-block")
+      });
+    });
+</script>
+        </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    
+        <div class="halve days">
+          <span id="days_calc"></span> 
+          <span id="days_one">{{cd.d}}</span>
+        </div>
+    
+        <div class="halve hourse">
+          <span id="hours_calc"></span>
+          <span id="hours_label">{{cd.h}}</span>
+        </div>
+    
+        <div class="halve minutess">
+          <span id="minutes_calc"></span>
+          <span id="minutes_label">{{cd.m}}</span>
+        </div>
+
+        <div class="halve seconds">
+          <span id="seconds_calc"></span>
+          <span id="seconds_label">{{cd.s}}</span>
+        </div>
+
+        <div class="halve seconds">
+          <span id="mseconds_calc"></span>
+          <span id="mseconds_label">ms</span>
+        </div>
+    
+      </div>
+      
+      <p>
+        <b class="date_eta">{{include.title_date}}</b> 
+        <span id="date_eta"></span>
+      </p>
+    
+    </div> 
+    
+     <div class="clock simple">
+      <div class="minutes-container">
+          <div class="minutes"></div>
+          <div class="secondsArr minutes"></div>
+          <img id="grid_background" src="{{include.bg_image}}" alt="grid">
+      </div>
+    </div>
+    
+    <div id="calc-content-div"></div>
+ 
+</div> 
+    
+<img class="path" src="{{include.line_1}}" alt="yellow line for home page">
+<img class="path_svg" src="{{include.line_2}}" alt="yellow line for home page">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{page.config}}"></script>
+
+<script>
+  function startClock(height){
+    var total_number = 12.5 * (height - {{include.p1}}) + {{include.p2}};
+    var append_html = "<span></span>";
+
+    var til_halving = {{include.p3}} - height;
+    console.log(til_halving, height)
+    append_html += "<b>{{include.counter}}</b> " + til_halving.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    console.log(GLOBAL_BLOCKTIME)
+    // var block_time = 9.69166666667;
+    var minutes_til_halving = til_halving * GLOBAL_BLOCKTIME;
+    var days_til_halving = minutes_til_halving / (24 * 60);
+    var days_remainder = days_til_halving - Math.floor(days_til_halving);
+    var minutes = days_remainder - Math.floor(days_remainder);
+    var percent_done = (((height % {{include.p4}}) / {{include.p4}}) * 360);
+    var percent_done1 = 0;
+    var seconds_til_halving = Math.max(Math.round((minutes_til_halving - Math.floor(minutes_til_halving)) * 60), 0);
+    var ms = 1000;
+    var t9 = 0;
+    var corner = 0;
+    var period = {{include.p5}} / 360 * 1000;
+    $(".minutes").css("transform", "rotate(" + percent_done + "deg)");
+    $(".secondsArr").css("transform", "rotate(" + corner + "deg)");
+
+    setInterval(() => {
+        $(".secondsArr").css("transform", "rotate(" + corner + "deg)");
+        corner++;
+        if (corner >= 360) {
+            corner = 0;
+        }
+    }, period);
+
+    setInterval(() => {
+        ms -= 21;
+        if (ms < 0) {
+            ms=999;
+        }
+        $('#mseconds_calc').html(ms.toString());
+    }, 10);
+
+    setInterval(() => {
+      seconds_til_halving--;
+      if (seconds_til_halving < 0) {
+        seconds_til_halving = 59;
+        minutes = minutes - (1/60);
+                    if (minutes < 0) {
+          minutes = 59 / 60;
+                        days_remainder = days_remainder - (1/24);
+                        if (days_remainder < 0) {
+            days_remainder = 23 / 24;              
+            days_til_halving--;
+          }
+        }
+      }
+      $('#days_calc').html(Math.floor(days_til_halving));
+      $('#hours_calc').html(Math.floor(days_remainder * 24));
+      $('#minutes_calc').html(((minutes * 60)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+      $('#seconds_calc').html(seconds_til_halving);
+    }, 1000);
+
+    var d = new Date(Date.now() + ((days_til_halving * 24 + days_remainder) * 60 + minutes) * 60 * 1000);
+
+    const monthes = {{ "[" | append: cd.monthes | append: "]"}};
+    /* const monthes = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octpber", "November", "December"]; */
+    var month = d.getMonth();
+    var month_name = monthes[month];
+    var day = d.getUTCDate();
+    var year = d.getUTCFullYear();
+
+    $('#date_eta').append(month_name + " " + day + ", " + year);
+
+    $("#calc-content-div").append(append_html);
+  }
+  jQuery(document).ready(function ($) {
+    $.get("https://www.satochi.co/latest-block")
+    .done((height) => {
+      startClock(height)
+    })
+    .fail(() => {
+      console.error("error calling latest-block")
+    });
+  });
+</script> -->
+
+
+
+
+
+
